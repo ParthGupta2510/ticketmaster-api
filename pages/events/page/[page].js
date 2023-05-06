@@ -32,7 +32,7 @@ export default function Events({ events }) {
   );
 }
 
-export async function getServerSideProps({ params = { pages: 1 } }) {
+export async function getServerSideProps({ params }) {
   const page = params.page || 1;
   const API_KEY = process.env.TM_API_KEY;
 
