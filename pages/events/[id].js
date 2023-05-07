@@ -3,7 +3,7 @@ import axios from "axios";
 
 function Event({ event }) {
   const router = useRouter();
-
+  console.log(event);
   if (router.isFallback) {
     return <div>Loading event...</div>;
   }
@@ -44,7 +44,7 @@ export async function getStaticProps({ params }) {
     );
 
     const event = response.data;
-
+    
     return { props: { event } };
   } catch (error) {
     console.log(error);
